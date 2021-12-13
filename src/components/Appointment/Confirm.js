@@ -15,3 +15,8 @@ function Confirm ({ message, onConfirm, onCancel}) {
 };
 
 export default Confirm;
+
+
+
+
+

@@ -16,10 +16,33 @@
       }
     } 
   })
-
   return appointmentArray;
 };
-    
+
+
+
+
+export function getInterviewersForDay(state, day) {
+  let interviewersArray = [];
+  if (state.days.length === 0) {
+    return interviewersArray;
+  }
+  const selectedDayArr = state.days.filter( days => days.name === day);
+  
+  if(selectedDayArr.length === 0) {
+    return interviewersArray;
+  };
+  
+  selectedDayArr[0].interviewers.map( id => {
+    for( let keys in state.interviewers){
+      if(Number(keys) === id) {
+        interviewersArray.push(state.interviewers[keys]);
+      }
+    } 
+  });
+
+  return interviewersArray;
+};
 
 export function getInterview(state, interview) {
   if (!interview) {
