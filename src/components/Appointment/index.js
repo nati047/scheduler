@@ -48,7 +48,7 @@ function Appointment (props) {
     transition("DELETING", true);
     
     props.cancelInterview(props.id)
-    .then( () => transition("EMPTY"))
+    .then( () => transition("EMPTY") )
     .catch(() => transition("ERROR_DELETE", true));
 
   };
