@@ -42,7 +42,21 @@ export const useApplicationData = () => {
     return newDays;
   };
 
-  // const updateSpots = (day, days, appointments) => { const dayIndex = days.findIndex(dayName => dayName.name === day); const dayObj = days[dayIndex]; const aptIds = dayObj.appointments; let spots = 0; for (const id of aptIds) { let appointment = appointments[id]; !appointment.interview && spots++; } let newDayObj = { ...dayObj, spots }; let newDaysArray = [...days]; newDaysArray[dayIndex] = newDayObj; return newDaysArray; };
+  // const updateSpots = (day, days, appointments) => {
+  //   const dayIndex = days.findIndex(dayName => dayName.name === day);
+  //   const dayObj = days[dayIndex];
+  //   const aptIds = dayObj.appointments; 
+  //   let spots = 0;
+  //   for (const id of aptIds) {
+  //     let appointment = appointments[id];
+  //     !appointment.interview && spots++;
+  //   }
+  //   let newDayObj = { ...dayObj, spots };
+  //   let newDaysArray = [...days];
+  //   newDaysArray[dayIndex] = newDayObj;
+    
+  //   return newDaysArray;
+  // };
 
   const  bookInterview = (id, interview) => {
 
