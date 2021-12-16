@@ -1,4 +1,8 @@
 # Interview Scheduler
+Enables to create, edit delete and manage interview appointments.
+
+## Screeenshots
+!["Home page: list of booked appointments"] (https://github.com/nati047/scheduler/blob/master/docs/home-page.png?raw=true)
 
 ## Setup
 
