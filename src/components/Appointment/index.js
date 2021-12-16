@@ -10,7 +10,7 @@ import Error from "./Error"
 import useVisualMode from "hooks/useVisualMode";
 
 function Appointment (props) {
-  // props bookInterview(), id, interview { student , interviewer {}}, interviewers [ {}, {} ], time, cancelInterview()
+  // types of mode state 
   const EMPTY = "EMPTY";
   const SHOW = "SHOW";
   const CREATE = "CREATE";
@@ -36,7 +36,7 @@ function Appointment (props) {
     
   };
 
-  function edit() {
+  function edit() { 
    transition("EDIT");
   };
 

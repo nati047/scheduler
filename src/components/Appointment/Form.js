@@ -13,12 +13,12 @@ function Form(props) {
     setInterviewer(null);
   };
 
-  const cancel = () => {
+  const cancel = () => { 
     reset();
     props.onCancel();
   };
 
-  const validate = () => {
+  const validate = () => { // check user inputs valid name
     if (student === "") {
       setError("Student name cannot be blank");
       return;

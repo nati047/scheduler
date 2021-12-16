@@ -3,9 +3,6 @@ import axios from "axios";
 
 
 export const useApplicationData = () => {
-  // state.days.spots
-  // appointmets for day stored in : state.days.appointments []
-  // to calculate remaining spots: state.days.appointments.map(appoint-id) => if (state.appointments[appoint-id].interview) counter++
   const [ state, setState ]= useState({
     day: "Monday",
     days: [],
@@ -14,11 +11,10 @@ export const useApplicationData = () => {
   
   });
   const setDay = day => setState({ ...state, day });
-
-
+  
   useEffect(() =>{
     Promise.all([
-      axios.get("api/days"),
+      axios.get("api/days"), 
       axios.get("api/appointments"),
       axios.get("api/interviewers")
     ]).then(all => {
@@ -42,22 +38,6 @@ export const useApplicationData = () => {
     return newDays;
   };
 
-  // const updateSpots = (day, days, appointments) => {
-  //   const dayIndex = days.findIndex(dayName => dayName.name === day);
-  //   const dayObj = days[dayIndex];
-  //   const aptIds = dayObj.appointments; 
-  //   let spots = 0;
-  //   for (const id of aptIds) {
-  //     let appointment = appointments[id];
-  //     !appointment.interview && spots++;
-  //   }
-  //   let newDayObj = { ...dayObj, spots };
-  //   let newDaysArray = [...days];
-  //   newDaysArray[dayIndex] = newDayObj;
-    
-  //   return newDaysArray;
-  // };
-
   const  bookInterview = (id, interview) => {
 
     const appointment = {
@@ -77,9 +57,6 @@ export const useApplicationData = () => {
           appointments,
           days: result
         });
-
-          
-        
       });
   };
 
